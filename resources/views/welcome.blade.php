@@ -137,6 +137,7 @@ i.fa.fa-temp-messenger::before {
 		<div class="socialIcons">
 			<a href="https://www.facebook.com/propellerexmouth/"><i class="fa fa-facebook-official"></i></a>
 			<a href="https://twitter.com/PropellerExm"><i class="fa fa-twitter-square"></i></a>
+			<a href="https://instagram.com/propellerexmouth"><i class="fa fa-instagram"></i></a>
 		</div>
 	</div>
 </div>
