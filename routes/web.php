@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/oauth/instagram/callback', function() {
+   return Redirect::to('/');
+})
