@@ -112,6 +112,11 @@ i.fa.fa-temp-messenger::before {
 .socialIcons a {
 	margin:10px;
 }
+.img--propel {
+	display:block;
+	width:50px;
+	margin:50px auto 30px auto;
+}
 </style>
 </head>
 <body>
@@ -129,6 +134,7 @@ i.fa.fa-temp-messenger::before {
 		<p>We aim to provide exciting spaces for new opportunities to surface and existing ventures to thrive via collaboration, experimentation and business support. Our first location will include a mix of desk/office/meeting space, presentation space, maker space, media rooms and group spaces - NOT a bunch of desks to rent in a serviced office, but a space to succeed.</p>
 		<p>By adopting a pay-it-forward attitude and embracing reciprocal business models we also encourage our community members to share their skills with local businesses, schools and groups through activities such as workshops, talks and mentor-programmes to ultimately grow our local economy and provide exciting job opportunities for future generations.</p>
 		<p>You can think of our mission as cultivating an ecosystem that paves the way for world-class companies to be created - a stone’s throw from the beach.</p>
+		<img class="img--propel" width=50 src="/img/white-logo.jpg" alt="Propelling" />
 	</div>
 </div>
 <div class="contact">
