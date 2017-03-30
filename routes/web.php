@@ -19,16 +19,19 @@ Route::get('/', function () {
     $instagram_posts = [];
     $instagram_token = Cache::get('INSTAGRAM_GENERATED_TOKEN');
     if ($instagram_token !== null) {
-        $feed_request = Instagram::getAuthenticatedRequest(
-            'GET',
-            'https://api.instagram.com/v1/users/self/media/recent',
-            $instagram_token,
-            ['COUNT' => 8]
-        );
-        $client = new \GuzzleHttp\Client();
-        $feed_response = $client->send($feed_request);
-        $instagram_feed = json_decode($feed_response->getBody()->getContents());
-        $instagram_posts = $instagram_feed->data;
+
+        $instagram_posts = Cache::remember('instagram_posts', 30, function () use ($instagram_token) {
+            $feed_request = Instagram::getAuthenticatedRequest(
+                'GET',
+                'https://api.instagram.com/v1/users/self/media/recent',
+                $instagram_token,
+                ['COUNT' => 8]
+            );
+            $client = new \GuzzleHttp\Client();
+            $feed_response = $client->send($feed_request);
+            $instagram_feed = json_decode($feed_response->getBody()->getContents());
+            return $instagram_feed->data;
+        });
     }
 
     return view('welcome',[
