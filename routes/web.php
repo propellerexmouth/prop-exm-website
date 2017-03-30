@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::get('/oauth/instagram/callback', function() {
    return Redirect::to('/');
-})
+});
