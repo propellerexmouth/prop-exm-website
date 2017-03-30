@@ -100,7 +100,6 @@ i.fa.fa-temp-messenger::before {
 	line-height: 50px;
 	width:300px;
 	background:#fff;
-	font-size:0.9em;
 	text-decoration: none;
 	color:#000;
 	transition: box-shadow 0.2s;
@@ -116,6 +115,46 @@ i.fa.fa-temp-messenger::before {
 	display:block;
 	width:50px;
 	margin:50px auto 30px auto;
+}
+.instagram {
+	display:flex;
+	flex-wrap: wrap;
+}
+.instagram__imageBlock {
+	width:50%;
+	flex-grow: 1;
+	min-width: 50%;
+}
+@media (min-width: 600px) {
+	.instagram__imageBlock {
+		width:25%;
+		min-width: 25%;
+	}
+}
+.instagram__image {
+	width:100%;
+	height:100%;
+}
+.instagram__follow {
+	border-top:1px solid #000;
+	padding:50px;
+	background:#fff;
+	text-align:center;
+}
+.instagram__link {
+	text-decoration:none;
+	color:#000;
+	border:1px solid #000;
+	border-radius:2px;
+	display:block;
+	margin:20px auto;
+	height:50px;
+	line-height: 50px;
+	width:300px;
+	transition:background-color 0.2s;
+}
+.instagram__link:hover {
+	background:#00FFCB;
 }
 </style>
 </head>
@@ -136,6 +175,20 @@ i.fa.fa-temp-messenger::before {
 		<p>You can think of our mission as cultivating an ecosystem that paves the way for world-class companies to be created - a stone’s throw from the beach.</p>
 		<img class="img--propel" width=50 src="/img/white-logo.jpg" alt="Propelling" />
 	</div>
+</div>
+<div class="instagram">
+	<?php $n=0; ?>
+	@foreach($instagram_posts as $instagram_post)
+		@if($n < 8)
+		<div class="instagram__imageBlock">
+			<img class="instagram__image" src="{!! $instagram_post->images->low_resolution->url !!}" alt="{{ $instagram_post->caption->text }}">
+		</div>
+		<?php $n++;?>
+		@endif
+	@endforeach
+</div>
+<div class="instagram__follow">
+	<a class="instagram__link" href="https://instagram.com/propellerexmouth"><i class="fa fa-instagram"></i> follow us on Instagram</a>
 </div>
 <div class="contact">
 	<div class="contact__container">
