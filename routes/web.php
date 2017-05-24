@@ -39,6 +39,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::post('/subscribe', ['uses' => 'SubscriptionController@store']);
+
 Route::get('/oauth/instagram', function(Request $request){
     
     $authUrl = Instagram::authorize([], function ($url, $provider) use ($request) {

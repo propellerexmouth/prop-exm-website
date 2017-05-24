@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "drewm/mailchimp-api": "^2.4",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "ramsey/laravel-oauth2-instagram": "^1.0"

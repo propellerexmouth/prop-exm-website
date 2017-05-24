@@ -13,3 +13,23 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+
+if (mix.config.inProduction) {
+    mix.version()
+} else {
+    mix.browserSync({
+        files: [
+            'public/css/*.css', // This is the one required to get the CSS to inject
+            // 'public/js/**/*.js',
+            'resources/views/**/*.php',
+            'routes/*.php'
+        ],
+        proxy: 'http://propeller-website.dev',
+        logPrefix: "Laravel Mix BrowserSync",
+        logConnections: false,
+        reloadOnRestart: false,
+        notify: false,
+        open: false
+    });
+}
