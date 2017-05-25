@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Propeller:Exmouth</title>
@@ -130,6 +130,6 @@
 </div>
 {{--<div class="modal__bg"></div>--}}
 <script src="//code.jquery.com/jquery-3.2.1.min.js" async defer></script>
-<script src="/js/app.js"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
