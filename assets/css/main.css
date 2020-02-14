@@ -1414,6 +1414,7 @@ body.is-preload #bg:before {
 	padding: 3rem 2rem;
 	max-height: 40rem;
 	overflow: hidden;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 #header .content .inner> :last-child {
@@ -1750,4 +1751,28 @@ body.is-article-visible #footer {
 
 body.is-preload #footer {
 	opacity: 0;
+}
+
+.banner {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+	position: fixed;
+	z-index: 100;
+	background: #E8413F;
+	padding: 10px;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+	text-align: center;
+	font-weight: 600;
+	font-size: 0.86rem;
+}
+
+.standout {
+	border-radius: 4px;
+	background: #E8413F;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 2.4rem;
 }
