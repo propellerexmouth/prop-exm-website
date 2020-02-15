@@ -1710,6 +1710,10 @@ body.is-preload #header .content .inner {
 
 @media screen and (max-width: 480px) {
 
+	.home-title {
+		font-size: 1.2rem;
+	}
+
 	#main article {
 		padding: 3rem 1.5rem 0.5rem 1.5rem;
 	}
